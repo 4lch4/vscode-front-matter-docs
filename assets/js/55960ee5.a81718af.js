@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvscode_front_matter_documentation=self.webpackChunkvscode_front_matter_documentation||[]).push([[121],{8070:function(t){t.exports=[]}}]);
