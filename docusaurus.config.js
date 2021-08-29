@@ -1,20 +1,25 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const SiteInfo = {
+  title: 'VSCode FrontMatter Extension Documentation',
+  tagline: 'Documentation of the FrontMatter VSCode Extension'
+}
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'VSCode FrontMatter Extension Documentation',
-  tagline: 'Documentation of the FrontMatter VSCode Extension',
+  title: SiteInfo.title,
+  tagline: SiteInfo.tagline,
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: '4lch4', // Usually your GitHub org/user name.
+  projectName: 'vscode-front-matter-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: SiteInfo.title,
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg'
@@ -26,7 +31,6 @@ module.exports = {
           position: 'left',
           label: 'Tutorial'
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -67,17 +71,13 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog'
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus'
+              href: 'https://github.com/4lch4/vscode-front-matter-docs'
             }
           ]
         }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
+      copyright: `Copyright © ${new Date().getFullYear()} 4lch4/vscode-front-matter-docs. Built with Docusaurus.`
     },
     prism: {
       theme: lightCodeTheme,
@@ -93,12 +93,7 @@ module.exports = {
           // Please change this to your repo.
           editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/'
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/'
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css')
         }
